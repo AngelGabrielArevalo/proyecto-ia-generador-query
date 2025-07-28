@@ -1,15 +1,15 @@
 from abc import ABC, abstractmethod
 from typing import List
-from src.domains.entities import PromptQuery
+from src.domains.entities.prompt_query_entity import PromptQuery
 
 
 class PromptQueryRepository(ABC):
     @abstractmethod
-    def crear(self, promptQuery: PromptQuery) -> None:
+    def crearVarios(self, promptsQuery: List[PromptQuery]) -> None:
         pass
 
     @abstractmethod
     def obtenerSimilares(
-        self, queryEmbedding: List[float], cantidadSimilares: int
+        self, promptEmbedding: List[float], cantidad: int
     ) -> List[PromptQuery]:
         pass

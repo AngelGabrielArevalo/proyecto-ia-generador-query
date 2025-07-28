@@ -7,5 +7,5 @@ class SentenceTransformerEmbeddingRepositoryImpl(EmbeddingRepository):
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
 
     def generarEmbedding(self, texto: str) -> List[float]:
-        embedding = self.model.encode(texto)
-        return embedding.tolist()
+        embedding = self.model.encode(texto, convert_to_numpy=True)  # type: ignore
+        return embedding.tolist() # type: ignore

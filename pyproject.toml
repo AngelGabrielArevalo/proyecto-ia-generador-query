@@ -10,7 +10,9 @@ requires-python = ">=3.10"
 dependencies = [
     "fastapi (>=0.116.1,<0.117.0)",
     "uvicorn[standard] (>=0.35.0,<0.36.0)",
-    "sentence-transformers (>=5.0.0,<6.0.0)"
+    "sentence-transformers (>=5.0.0,<6.0.0)",
+    "qdrant-client (>=1.15.0,<2.0.0)",
+    "uuid (>=1.30,<2.0)"
 ]
 
 [tool.poetry]
