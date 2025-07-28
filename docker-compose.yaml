@@ -7,10 +7,9 @@ services:
     ports:
       - "6333:6333"  # puerto API REST y gRPC
     volumes:
-      - qdrant_storage:/qdrant/storage
+      - ./qdrant_data:/qdrant/storage   # bind mount local para persistencia
     environment:
       - QDRANT__SERVICE__GRPC_PORT=6334
       - QDRANT__SERVICE__HTTP_PORT=6333
 
-volumes:
-  qdrant_storage:
+# No necesitás declarar el volumen qdrant_storage ahora
