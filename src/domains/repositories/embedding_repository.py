@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from ast import List
+from typing import List
 
 class EmbeddingRepository(ABC):
     @abstractmethod
